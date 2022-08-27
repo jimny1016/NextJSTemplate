@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"clean": "rimraf \"{.next,dist,build,out,node_modules}\"",
-		"dev": "APP_ENV=production next dev",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start"
 	},
