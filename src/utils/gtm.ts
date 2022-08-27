@@ -161,3 +161,12 @@ export const pushSearchDataLayer = (searchString: string) => {
 
   dataLayer.push(pushData);
 };
+
+interface GTMProducts {
+  id: string;
+  name: string;
+  category?: string;
+  brand?: string;
+  price?: string;
+  quantity: number;
+}
