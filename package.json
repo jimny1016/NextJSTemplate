@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"clean": "rimraf \"{.next,dist,build,out,node_modules}\"",
-		"dev": "next dev",
+		"dev": "APP_ENV=production next dev",
 		"build": "next build",
 		"start": "next start"
 	},
@@ -55,6 +55,7 @@
 		"autoprefixer": "^10.4.0",
 		"postcss": "^8.3.11",
 		"rimraf": "^3.0.2",
+		"stylelint-config-standard-scss": "^5.0.0",
 		"tailwindcss": "^2.2.19",
 		"tailwindcss-rtl": "^0.8.0",
 		"typescript": "^4.5.2"

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "pwa-node",
+        "request": "attach",
+        "name": "Launch Program",
+        "skipFiles": ["<node_internals>/**"],
+        "port": 9229,
+        "resolveSourceMapLocations": [
+          "${workspaceFolder}/",
+          "!/node_modules/**"
+      ]
+      },{
+        "type": "node",
+        "request": "launch",
+        "name": "Launch via NPM",
+        "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\next",
+        "port": 9229,
+        "env": {
+          "NODE_OPTIONS": "--inspect"
+        }
+      }
+    ]
+  }
+  
