@@ -85,7 +85,7 @@ const ProductCard: FC<ProductProps> = ({
           imageContentClassName
         )}
       >
-        {/* <Image
+        <Image
           src={product?.image?.thumbnail ?? placeholderImage}
           width={imgWidth}
           height={imgHeight}
@@ -101,7 +101,7 @@ const ProductCard: FC<ProductProps> = ({
             'rounded-md transition duration-150 ease-linear transform group-hover:scale-105': variant === 'gridSlim',
             'rounded-s-md transition duration-200 ease-linear transform group-hover:scale-105': variant === 'list',
           })}
-        /> */}
+        />
 
         <div className="absolute top-3.5 md:top-5 3xl:top-7 start-3.5 md:start-5 3xl:start-7 flex flex-col gap-y-1 items-start">
           {discount && (variant === 'gridModernWide' || variant === 'gridModern' || variant === 'gridTrendy') && (
