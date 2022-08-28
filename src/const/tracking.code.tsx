@@ -86,6 +86,8 @@ export namespace facebook {
 }
 
 export namespace googleTagManager {
+  const containerID = 'WGT8F6C';
+
   export const header = (
     <>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-J98ZLVXRKM"></script>
@@ -99,6 +101,14 @@ export namespace googleTagManager {
         }}
       ></script>
     </>
+  );
+
+  export const body = (
+    <noscript
+      dangerouslySetInnerHTML={{
+        __html: `<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-${containerID} height='0' width='0' style='display:none; visibility:hidden'></iframe>`,
+      }}
+    ></noscript>
   );
 }
 export const all_tracking_codes_header = (path?: string): JSX.Element => {

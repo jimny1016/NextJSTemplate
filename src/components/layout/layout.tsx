@@ -66,6 +66,7 @@ const Layout: React.FC = ({ children }) => {
         }}
       >
         {children}
+        {tracking.googleTagManager.body}
       </main>
       <Footer />
       <MobileNavigation />
