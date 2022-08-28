@@ -86,15 +86,15 @@ export namespace facebook {
 }
 
 export namespace googleTagManager {
-  const containerID2 = 'WGT8F6C';
-  const containerID = 'J98ZLVXRKM';
+  const gtmId = 'WGT8F6C';
+  const gaId = 'J98ZLVXRKM';
 
   export const header = (
     <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=G-${containerID}`}></script>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=G-${gaId}`}></script>
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-${containerID}');`,
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-${gtmId}');`,
         }}
       ></script>
     </>
@@ -103,7 +103,7 @@ export namespace googleTagManager {
   export const body = (
     <noscript
       dangerouslySetInnerHTML={{
-        __html: `<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-${containerID} height='0' width='0' style='display:none; visibility:hidden'></iframe>`,
+        __html: `<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-${gtmId} height='0' width='0' style='display:none; visibility:hidden'></iframe>`,
       }}
     ></noscript>
   );
