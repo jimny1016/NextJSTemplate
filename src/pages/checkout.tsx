@@ -7,7 +7,7 @@ import CheckoutCard from '@components/checkout/checkout-card';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from 'next';
 import { useEffect } from 'react';
-import { checkoutViewEvent, pushSearchDataLayer } from '@utils/gtm';
+import { checkoutViewEvent, purchaseViewEvent, pushSearchDataLayer } from '@utils/gtm';
 
 export default function CheckoutPage() {
   const gaTest = () => {
@@ -26,6 +26,15 @@ export default function CheckoutPage() {
       price: '999',
     });
     checkoutViewEvent(gtmProduct);
+
+    const orderResult = {
+      id: d.toString(),
+      revenue: (100).toString(),
+      tax: (5).toString(),
+      shipping: (3).toString(),
+    };
+
+    purchaseViewEvent(gtmProduct, orderResult);
   };
   useEffect(() => {
     gaTest();
