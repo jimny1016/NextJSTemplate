@@ -12,7 +12,7 @@ import { checkoutViewEvent, purchaseViewEvent, pushSearchDataLayer } from '@util
 export default function CheckoutPage() {
   const gaTest = () => {
     const d = new Date();
-    let text = d.toString();
+    let text = 't-shirt';
     pushSearchDataLayer(text);
 
     let gtmProduct = [] as GTMProducts[];
