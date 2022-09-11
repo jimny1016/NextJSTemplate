@@ -156,7 +156,7 @@ export const pushSearchDataLayer = (searchString: string) => {
   const dataLayer = window.dataLayer || [];
   const pushData = {
     event: 'searchSubmit',
-    SearchParam: searchString,
+    searchString: searchString,
   };
 
   dataLayer.push(pushData);
