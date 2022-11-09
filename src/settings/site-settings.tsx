@@ -1,32 +1,31 @@
-import { ILFlag } from '@components/icons/ILFlag'
-import { SAFlag } from '@components/icons/SAFlag'
-import { CNFlag } from '@components/icons/CNFlag'
-import { USFlag } from '@components/icons/USFlag'
-import { DEFlag } from '@components/icons/DEFlag'
-import { ESFlag } from '@components/icons/ESFlag'
-import Nike from 'public/assets/images/brands/megamenu/nike.png'
-import Dior from 'public/assets/images/brands/megamenu/dior.png'
-import Gucci from 'public/assets/images/brands/megamenu/gucci.png'
-import Gucci1 from 'public/assets/images/brands/megamenu/gucci1.png'
-import Puma from 'public/assets/images/brands/megamenu/puma.png'
-import Levis from 'public/assets/images/brands/megamenu/levis.png'
-import Banner1 from 'public/assets/images/banner/megamenu/banner-1.png'
-import Banner2 from 'public/assets/images/banner/megamenu/banner-2.png'
+import { ILFlag } from '@components/icons/ILFlag';
+import { SAFlag } from '@components/icons/SAFlag';
+import { CNFlag } from '@components/icons/CNFlag';
+import { USFlag } from '@components/icons/USFlag';
+import { DEFlag } from '@components/icons/DEFlag';
+import { ESFlag } from '@components/icons/ESFlag';
+import Nike from 'public/assets/images/brands/megamenu/nike.png';
+import Dior from 'public/assets/images/brands/megamenu/dior.png';
+import Gucci from 'public/assets/images/brands/megamenu/gucci.png';
+import Gucci1 from 'public/assets/images/brands/megamenu/gucci1.png';
+import Puma from 'public/assets/images/brands/megamenu/puma.png';
+import Levis from 'public/assets/images/brands/megamenu/levis.png';
+import Banner1 from 'public/assets/images/banner/megamenu/banner-1.png';
+import Banner2 from 'public/assets/images/banner/megamenu/banner-2.png';
 
-import { ThunderIcon } from '@components/icons/thunder-icon'
-import { WomenIcon } from '@components/icons/women-icon'
-import { MenIcon } from '@components/icons/men-icon'
-import { WatchIcon } from '@components/icons/watch-icon'
-import { WalletIcon } from '@components/icons/wallet-icon'
-import { BagIcon } from '@components/icons/bag-icon'
-import { JewelryIcon } from '@components/icons/jewelry-icon'
-import { SunglassIcon } from '@components/icons/sunglass-icon'
-import { SneakerIcon } from '@components/icons/sneaker-icon'
+import { ThunderIcon } from '@components/icons/thunder-icon';
+import { WomenIcon } from '@components/icons/women-icon';
+import { MenIcon } from '@components/icons/men-icon';
+import { WatchIcon } from '@components/icons/watch-icon';
+import { WalletIcon } from '@components/icons/wallet-icon';
+import { BagIcon } from '@components/icons/bag-icon';
+import { JewelryIcon } from '@components/icons/jewelry-icon';
+import { SunglassIcon } from '@components/icons/sunglass-icon';
+import { SneakerIcon } from '@components/icons/sneaker-icon';
 
 export const siteSettings = {
   name: 'ChawkBazar',
-  description:
-    'Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.',
+  description: 'Fastest E-commerce template built with React, NextJS, TypeScript, React-Query and Tailwind CSS.',
   author: {
     name: 'RedQ, Inc.',
     websiteUrl: 'https://redq.io',
@@ -92,6 +91,11 @@ export const siteSettings = {
             id: 9,
             path: '/contemporary',
             label: 'menu-contemporary',
+          },
+          {
+            id: 10,
+            path: '/ancient',
+            label: 'menu-ancient',
           },
         ],
       },
@@ -767,6 +771,16 @@ export const siteSettings = {
             path: '/refined',
             label: 'menu-refined',
           },
+          {
+            id: 9,
+            path: '/contemporary',
+            label: 'menu-contemporary',
+          },
+          {
+            id: 10,
+            path: '/ancient',
+            label: 'menu-ancient',
+          },
         ],
       },
       {
@@ -1112,37 +1126,37 @@ export const siteSettings = {
         id: 'ar',
         name: 'عربى - AR',
         value: 'ar',
-        icon: <SAFlag width='20px' height='15px' />,
+        icon: <SAFlag width="20px" height="15px" />,
       },
       {
         id: 'zh',
         name: '中国人 - ZH',
         value: 'zh',
-        icon: <CNFlag width='20px' height='15px' />,
+        icon: <CNFlag width="20px" height="15px" />,
       },
       {
         id: 'en',
         name: 'English - EN',
         value: 'en',
-        icon: <USFlag width='20px' height='15px' />,
+        icon: <USFlag width="20px" height="15px" />,
       },
       {
         id: 'de',
         name: 'Deutsch - DE',
         value: 'de',
-        icon: <DEFlag width='20px' height='15px' />,
+        icon: <DEFlag width="20px" height="15px" />,
       },
       {
         id: 'he',
         name: 'rעברית - HE',
         value: 'he',
-        icon: <ILFlag width='20px' height='15px' />,
+        icon: <ILFlag width="20px" height="15px" />,
       },
       {
         id: 'es',
         name: 'Español - ES',
         value: 'es',
-        icon: <ESFlag width='20px' height='15px' />,
+        icon: <ESFlag width="20px" height="15px" />,
       },
     ],
     categoryMenu: [
@@ -2896,7 +2910,7 @@ export const siteSettings = {
         id: 1,
         path: '/search',
         label: 'menu-deals-today',
-        icon: <ThunderIcon className='w-3 h-auto' />,
+        icon: <ThunderIcon className="w-3 h-auto" />,
       },
       {
         id: 2,
@@ -2915,4 +2929,4 @@ export const siteSettings = {
       },
     ],
   },
-}
+};

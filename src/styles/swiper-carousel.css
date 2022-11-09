@@ -5,13 +5,7 @@
 .heightFull .carouselWrapper > .swiper > .swiper-wrapper,
 .heightFull .carouselWrapper > .swiper > .swiper-wrapper .swiper-slide > div,
 .heightFull .carouselWrapper > .swiper > .swiper-wrapper .swiper-slide > a,
-.heightFull
-  .carouselWrapper
-  > .swiper
-  > .swiper-wrapper
-  .swiper-slide
-  > a
-  > .group {
+.heightFull .carouselWrapper > .swiper > .swiper-wrapper .swiper-slide > a > .group {
   height: 100%;
 }
 .swiper-wrapper .swiper-slide {
@@ -43,10 +37,7 @@
 .carouselWrapper .swiper .swiper-pagination-bullets {
   bottom: 20px;
 }
-.carouselWrapper
-  .swiper
-  .swiper-pagination-bullets
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.carouselWrapper .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 16px;
   background-color: #000;
 }
@@ -54,17 +45,11 @@
   .carouselWrapper .swiper .swiper-pagination-bullets {
     bottom: 24px;
   }
-  .carouselWrapper
-    .swiper
-    .swiper-pagination-bullets
-    .swiper-pagination-bullet {
+  .carouselWrapper .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
   }
-  .carouselWrapper
-    .swiper
-    .swiper-pagination-bullets
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  .carouselWrapper .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 20px;
   }
 }
@@ -75,27 +60,18 @@
   .carouselWrapper.pagination-left .swiper-pagination-bullets {
     bottom: 52px;
   }
-  .carouselWrapper
-    .swiper
-    .swiper-pagination-bullets
-    .swiper-pagination-bullet {
+  .carouselWrapper .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
     margin-left: 8px;
     margin-right: 8px;
   }
-  .carouselWrapper
-    .swiper
-    .swiper-pagination-bullets
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  .carouselWrapper .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 28px;
   }
 }
 
-.carouselWrapper.dotsCircle
-  .swiper
-  .swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.carouselWrapper.dotsCircle .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -104,10 +80,7 @@
   opacity: 0.5;
   transform: scale(0.7);
 }
-.carouselWrapper.dotsCircle
-  .swiper
-  .swiper-pagination-bullets
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.carouselWrapper.dotsCircle .swiper .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fff;
   opacity: 1;
   transform: scale(1);
@@ -133,25 +106,60 @@
 .testimonial-carousel .swiper-scrollbar-drag {
   background-color: #212121;
 }
+
+.ancient-testimonial .carousel-control {
+  transition: 0.5s;
+  visibility: visible;
+  opacity: 0;
+}
 @media screen and (min-width: 768px) {
   .testimonial-carousel .swiper-slide-active > div {
+    background-color: #fff;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.08);
+  }
+  .testimonial-carousel.reduce-child-padding .swiper-slide-active > div {
+    background-color: #fff;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.08);
+  }
+  .testimonial-carousel.reduce-child-padding .swiper-slide-active > div {
     background-color: #fff;
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.08);
   }
   .testimonial-carousel .swiper .swiper-wrapper > div {
     padding: 15px 14px 0;
   }
+
+  .testimonial-carousel.reduce-child-padding .swiper .swiper-wrapper > div {
+    padding: 15px 5px 0;
+  }
+
   .testimonial-carousel .swiper {
     padding-bottom: 45px;
     margin-left: -30px;
     margin-right: -14px;
     margin-top: -15px;
   }
+
   .testimonial-carousel .swiper .swiper-wrapper > div.swiper-slide-active {
     padding-left: 30px;
   }
+
+  .testimonial-carousel.reduce-child-padding .swiper .swiper-wrapper > div.swiper-slide > div {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  }
+
   .testimonial-carousel .swiper-horizontal .swiper-scrollbar {
     width: calc(100% - 44px);
+  }
+
+  .testimonial-carousel .swiper-horizontal .swiper-scrollbar {
+    width: calc(100% - 44px);
+  }
+
+  .ancient-testimonial:hover .carousel-control {
+    opacity: 1;
+    visibility: visible;
   }
 }
 @media screen and (min-width: 1280px) {

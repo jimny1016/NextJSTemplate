@@ -26,8 +26,9 @@ interface BannerProps {
 
 const BannerGridBlock: React.FC<BannerProps> = ({
 	className = "mb-12 lg:mb-14 xl:mb-16 lg:pb-1 xl:pb-0",
-}) => {
+}) => {	
 	const { width } = useWindowSize();
+
 	return (
 		<div className={`${className}`}>
 			{width < 768 ? (

@@ -12,7 +12,7 @@ interface Props {
   variantRounded?: 'rounded' | 'default'
   prevNextButtons?: 'none' | ''
 }
-
+//  2xl:mb-[75px]
 const HeroSlider: React.FC<Props> = ({
   className = 'mb-12 md:mb-14 xl:mb-[60px]',
   variant = 'box',

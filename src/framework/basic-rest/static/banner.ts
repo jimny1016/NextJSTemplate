@@ -14,7 +14,7 @@ export const homeOneBanner = {
       height: 270,
     },
   },
-}
+};
 
 export const homeOneHeroBanner = [
   {
@@ -68,7 +68,7 @@ export const homeOneHeroBanner = [
       },
     },
   },
-]
+];
 
 export const homeTwoHeroBanner = [
   {
@@ -122,7 +122,7 @@ export const homeTwoHeroBanner = [
       },
     },
   },
-]
+];
 export const homeEightHeroBanner = [
   {
     id: 1,
@@ -175,7 +175,7 @@ export const homeEightHeroBanner = [
       },
     },
   },
-]
+];
 
 export const homeThreeBanner = [
   {
@@ -184,7 +184,8 @@ export const homeThreeBanner = [
     slug: 'winter-collection',
     image: {
       mobile: {
-        url: '/assets/images/banner/banner-mobile-3.jpg',
+        // url: '/assets/images/banner/banner-mobile-3.jpg',
+        url: '/assets/images/banner/banner-3.jpg',
         width: 450,
         height: 180,
       },
@@ -212,7 +213,7 @@ export const homeThreeBanner = [
       },
     },
   },
-]
+];
 export const homeThreeMasonryBanner = [
   {
     id: 1,
@@ -322,7 +323,7 @@ export const homeThreeMasonryBanner = [
     },
     type: 'medium',
   },
-]
+];
 
 export const bannerGrid = [
   {
@@ -379,7 +380,7 @@ export const bannerGrid = [
     },
     type: 'large',
   },
-]
+];
 
 export const promotionBanner = [
   {
@@ -436,7 +437,7 @@ export const promotionBanner = [
     },
     type: 'small',
   },
-]
+];
 
 export const promotionBannerTwo = [
   {
@@ -490,7 +491,7 @@ export const promotionBannerTwo = [
       },
     },
   },
-]
+];
 
 export const promotionBannerThree = [
   {
@@ -544,7 +545,7 @@ export const promotionBannerThree = [
       },
     },
   },
-]
+];
 
 export const bannerDataOne = [
   {
@@ -601,7 +602,7 @@ export const bannerDataOne = [
     },
     type: 'small',
   },
-]
+];
 
 export const bannerDataTwo = [
   {
@@ -658,7 +659,7 @@ export const bannerDataTwo = [
     },
     type: 'medium',
   },
-]
+];
 
 export const bannerDataThree = [
   {
@@ -715,7 +716,7 @@ export const bannerDataThree = [
     },
     type: 'small',
   },
-]
+];
 
 export const bannerDataFour = [
   {
@@ -772,7 +773,7 @@ export const bannerDataFour = [
     },
     type: 'small',
   },
-]
+];
 export const bannerDataFourMobile = [
   {
     id: 1,
@@ -828,7 +829,7 @@ export const bannerDataFourMobile = [
     },
     type: 'medium',
   },
-]
+];
 
 export const homeThreeProductsBanner = [
   {
@@ -865,7 +866,7 @@ export const homeThreeProductsBanner = [
       },
     },
   },
-]
+];
 
 export const homeFourBanner = [
   {
@@ -919,7 +920,7 @@ export const homeFourBanner = [
       },
     },
   },
-]
+];
 
 export const homeFourGridBanners = [
   {
@@ -976,7 +977,7 @@ export const homeFourGridBanners = [
     },
     type: 'small',
   },
-]
+];
 
 export const homeFiveBanner = {
   id: 1,
@@ -994,7 +995,7 @@ export const homeFiveBanner = {
       height: 570,
     },
   },
-}
+};
 
 export const homeSixHeroSlider = [
   {
@@ -1048,7 +1049,7 @@ export const homeSixHeroSlider = [
       },
     },
   },
-]
+];
 
 export const homeHeroGridSlider = [
   {
@@ -1102,7 +1103,7 @@ export const homeHeroGridSlider = [
       },
     },
   },
-]
+];
 
 export const homeSixCoupons = {
   id: 3,
@@ -1120,7 +1121,7 @@ export const homeSixCoupons = {
       height: 800,
     },
   },
-}
+};
 
 export const homeSevenBanner = {
   id: 1,
@@ -1138,7 +1139,7 @@ export const homeSevenBanner = {
       height: 620,
     },
   },
-}
+};
 
 export const homeElegantHeroSlider = [
   {
@@ -1192,7 +1193,7 @@ export const homeElegantHeroSlider = [
       },
     },
   },
-]
+];
 
 export const saleBannerGrid = [
   {
@@ -1229,7 +1230,7 @@ export const saleBannerGrid = [
       },
     },
   },
-]
+];
 
 export const saleBannerWithProducts = [
   {
@@ -1266,7 +1267,7 @@ export const saleBannerWithProducts = [
       },
     },
   },
-]
+];
 
 export const homeEightCoupons = {
   id: 1,
@@ -1284,7 +1285,7 @@ export const homeEightCoupons = {
       height: 480,
     },
   },
-}
+};
 
 export const homeEightWinterBanner = {
   id: 1,
@@ -1302,7 +1303,7 @@ export const homeEightWinterBanner = {
       height: 620,
     },
   },
-}
+};
 
 export const homeContemporaryHeroSlider = [
   {
@@ -1356,7 +1357,7 @@ export const homeContemporaryHeroSlider = [
       },
     },
   },
-]
+];
 
 export const bannerDataContemporary = [
   {
@@ -1395,7 +1396,7 @@ export const bannerDataContemporary = [
     },
     type: 'medium',
   },
-]
+];
 
 export const contemporaryBanner1 = {
   id: 1,
@@ -1413,7 +1414,7 @@ export const contemporaryBanner1 = {
       height: 600,
     },
   },
-}
+};
 
 export const contemporaryBanner2 = {
   id: 1,
@@ -1431,7 +1432,7 @@ export const contemporaryBanner2 = {
       height: 300,
     },
   },
-}
+};
 
 export const contemporaryBanner3 = {
   id: 1,
@@ -1449,4 +1450,132 @@ export const contemporaryBanner3 = {
       height: 480,
     },
   },
-}
+};
+
+export const ancientHeroBanner = [
+  {
+    id: 1,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/hero-banner-mobile-1.png',
+        width: 375,
+        height: 220,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/hero-banner-1.jpg',
+        width: 1920,
+        height: 900,
+      },
+    },
+  },
+  {
+    id: 2,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/hero-banner-mobile-2.png',
+        width: 375,
+        height: 220,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/hero-banner-2.jpg',
+        width: 1920,
+        height: 900,
+      },
+    },
+  },
+  {
+    id: 3,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/hero-banner-mobile-3.png',
+        width: 375,
+        height: 220,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/hero-banner-3.jpg',
+        width: 1920,
+        height: 900,
+      },
+    },
+  },
+];
+
+export const ancientBanner1 = [
+  {
+    id: 1,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/banner-1-mobile-m.png',
+        width: 1100,
+        height: 590,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/banner-1.png',
+        width: 900,
+        height: 380,
+      },
+    },
+  },
+  {
+    id: 2,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/banner-2-mobile-m.png',
+        width: 1100,
+        height: 590,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/banner-2.png',
+        width: 990,
+        height: 380,
+      },
+    },
+  },
+];
+
+export const ancientBanner2 = [
+  {
+    id: 1,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/banner-3-mobile-m.png',
+        width: 1100,
+        height: 590,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/banner-3.png',
+        width: 1190,
+        height: 380,
+      },
+    },
+  },
+  {
+    id: 2,
+    title: 'Winter Collection of Kid Items',
+    slug: 'winter-collection',
+    image: {
+      mobile: {
+        url: '/assets/images/banner/ancient/banner-4-mobile-m.png',
+        width: 1100,
+        height: 590,
+      },
+      desktop: {
+        url: '/assets/images/banner/ancient/banner-4.png',
+        width: 690,
+        height: 380,
+      },
+    },
+  },
+];

@@ -1,29 +1,28 @@
-import React from 'react'
-import SectionHeader from '@components/common/section-header'
-import ProductCard from '@components/product/product-card'
-import ProductFeedLoader from '@components/ui/loaders/product-feed-loader'
-import { Product } from '@framework/types'
-import Alert from '@components/ui/alert'
-import cn from 'classnames'
+import React from 'react';
+import SectionHeader from '@components/common/section-header';
+import ProductCard from '@components/product/product-card';
+import ProductFeedLoader from '@components/ui/loaders/product-feed-loader';
+import { Product } from '@framework/types';
+import Alert from '@components/ui/alert';
+import cn from 'classnames';
 
 interface ProductsProps {
-  sectionHeading?: any
-  categorySlug?: string
-  className?: string
-  products?: Product[]
-  loading: boolean
-  error?: string
-  uniqueKey?: string
-  variant?:
-    | 'grid'
-    | 'gridSlim'
-    | 'list'
-    | 'listSmall'
-    | 'gridModern'
-    | 'gridModernWide'
-  limit?: number
-  imgWidth?: number | string
-  imgHeight?: number | string
+  sectionHeading?: any;
+  categorySlug?: string;
+  className?: string;
+  products?: Product[];
+  loading: boolean;
+  error?: string;
+  uniqueKey?: string;
+  variant?: 'circle' | 'rounded' | 'listSmall' | 'grid' | 'gridSlim' | 'list' | 'gridModern' | 'gridModernWide' | 'gridTrendy' | undefined;
+  limit?: number;
+  imgWidth?: number | string;
+  imgHeight?: number | string;
+  hideProductDescription?: boolean;
+  showCategory?: boolean;
+  showRating?: boolean;
+  demoVariant?: 'ancient';
+  disableBorderRadius?: boolean;
 }
 
 const ProductsBlock: React.FC<ProductsProps> = ({
@@ -38,28 +37,30 @@ const ProductsBlock: React.FC<ProductsProps> = ({
   limit = 10,
   imgWidth,
   imgHeight,
+  hideProductDescription = false,
+  showCategory = false,
+  showRating = false,
+  demoVariant,
+  disableBorderRadius = false,
 }) => {
   return (
     <div className={className}>
-      {sectionHeading && (
-        <SectionHeader
-          sectionHeading={sectionHeading}
-          categorySlug={categorySlug}
-        />
-      )}
+      {sectionHeading && <SectionHeader sectionHeading={sectionHeading} categorySlug={categorySlug} />}
 
       {error ? (
         <Alert message={error} />
       ) : (
         <div
           className={cn(
-            'grid gap-x-3 md:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 bg-white',
+            `grid gap-x-${demoVariant === 'ancient' ? 2 : 3} md:gap-x-${demoVariant === 'ancient' ? 2 : 5} xl:gap-x-${
+              demoVariant === 'ancient' ? 2 : 7
+            } gap-y-${demoVariant === 'ancient' ? 2 : 3} xl:gap-y-${demoVariant === 'ancient' ? 2 : 5} 2xl:gap-y-${
+              demoVariant === 'ancient' ? 3 : 8
+            } bg-white`,
             {
-              'grid-cols-2 sm:grid-cols-3 2xl:grid-cols-5': variant === 'grid',
-              'grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4':
-                variant === 'gridModernWide',
-              'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5':
-                variant === 'gridModern',
+              'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5': variant === 'grid',
+              'grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4': variant === 'gridModernWide',
+              'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5': variant === 'gridModern',
             }
           )}
         >
@@ -68,18 +69,23 @@ const ProductsBlock: React.FC<ProductsProps> = ({
           ) : (
             products?.map((product: Product) => (
               <ProductCard
+                showCategory={showCategory}
+                showRating={showRating}
+                hideProductDescription={hideProductDescription}
                 key={`product--key${product.id}`}
                 product={product}
                 imgWidth={imgWidth}
                 imgHeight={imgHeight}
                 variant={variant}
+                demoVariant="ancient"
+                disableBorderRadius={disableBorderRadius}
               />
             ))
           )}
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ProductsBlock
+export default ProductsBlock;

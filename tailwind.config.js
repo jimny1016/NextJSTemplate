@@ -3,6 +3,14 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false,
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1500px',
+      '3xl': '1780px',
+    },
     extend: {
       colors: {
         body: '#5A5A5A',
@@ -33,16 +41,11 @@ module.exports = {
           600: '#3A3A3A',
           700: '#292929',
           800: '#707070',
+          900: '#343D48',
         },
       },
       fontSize: {
         '10px': '.625rem',
-      },
-      screens: {
-        sm: '480px',
-        lg: '1025px',
-        '2xl': '1500px',
-        '3xl': '1780px',
       },
       spacing: {
         '430px': '430px',
@@ -97,4 +100,4 @@ module.exports = {
     }),
     require('tailwindcss-rtl'),
   ],
-}
+};
