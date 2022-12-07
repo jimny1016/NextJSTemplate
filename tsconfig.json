@@ -25,7 +25,10 @@
       "@framework/*": ["src/framework/basic-rest/*"],
       "@settings/*": ["src/settings/*"],
       "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@const/*": [
+        "src/const/*"
+      ],
     },
     "incremental": true
   },
