@@ -1,0 +1,16 @@
+.dockerignore
+.git
+.gitignore
+.vscode
+.github
+docs
+dockerfile
+README.md
+test
+jest.config.js
+jest.setup.js
+.dev/package.json
+.dev/languages.ts
+.dev/languages.loader.ts
+.dev/schemas
+.dev/schemas/**
