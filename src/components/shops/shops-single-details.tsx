@@ -1,27 +1,28 @@
-import StickyBox from "react-sticky-box";
-import { useShopQuery } from "@framework/shop/get-shop";
-import Text from "@components/ui/text";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { useUI } from "@contexts/ui.context";
-import { getDirection } from "@utils/get-direction";
-import { ProductGrid } from "@components/product/product-grid";
-import Container from "@components/ui/container";
-import { Drawer } from "@components/common/drawer/drawer";
-import ShopSidebar from "@components/shops/shop-sidebar";
-import ShopSidebarDrawer from "@components/shops/shop-sidebar-drawer";
-import { useTranslation } from "next-i18next";
+import StickyBox from 'react-sticky-box';
+import { useShopQuery } from '@framework/shop/get-shop';
+import Text from '@components/ui/text';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import { useUI } from '@contexts/ui.context';
+import { getDirection } from '@utils/get-direction';
+import { ProductGrid } from '@components/product/product-grid';
+import Container from '@components/ui/container';
+import { Drawer } from '@components/common/drawer/drawer';
+import ShopSidebar from '@components/shops/shop-sidebar';
+import ShopSidebarDrawer from '@components/shops/shop-sidebar-drawer';
+import { useTranslation } from 'next-i18next';
+import motionProps from '@components/common/drawer/motion';
 
-const ShopsSingleDetails: React.FC = () => {
+export default function ShopsSingleDetails() {
 	const {
 		query: { slug },
 	} = useRouter();
-	const {t} = useTranslation("common")
+	const { t } = useTranslation('common');
 	const { data, isLoading } = useShopQuery(slug as string);
 	const { openShop, displayShop, closeShop } = useUI();
 	const { locale } = useRouter();
 	const dir = getDirection(locale);
-	const contentWrapperCSS = dir === "ltr" ? { left: 0 } : { right: 0 };
+	const contentWrapperCSS = dir === 'ltr' ? { left: 0 } : { right: 0 };
 
 	if (isLoading) return <p>Loading...</p>;
 
@@ -69,19 +70,16 @@ const ShopsSingleDetails: React.FC = () => {
 					</div>
 				</div>
 			</Container>
+			{/* TODO: need to use just one drawer component */}
 			<Drawer
-				placement={dir === "rtl" ? "right" : "left"}
+				placement={dir === 'rtl' ? 'right' : 'left'}
 				open={displayShop}
 				onClose={closeShop}
-				handler={false}
-				showMask={true}
-				level={null}
 				contentWrapperStyle={contentWrapperCSS}
+				{...motionProps}
 			>
 				<ShopSidebarDrawer data={data} />
 			</Drawer>
 		</>
 	);
-};
-
-export default ShopsSingleDetails;
+}

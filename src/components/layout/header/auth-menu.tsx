@@ -1,4 +1,5 @@
-import Link from "@components/ui/link";
+import Link from '@components/ui/link';
+
 interface Props {
 	href: string;
 	className?: string;
@@ -6,13 +7,13 @@ interface Props {
 	isAuthorized: boolean;
 }
 
-const AuthMenu: React.FC<Props> = ({
+export default function AuthMenu({
 	isAuthorized,
 	href,
 	className,
 	btnProps,
 	children,
-}) => {
+}: React.PropsWithChildren<Props>) {
 	return isAuthorized ? (
 		<Link href={href} className={className}>
 			{children}
@@ -20,6 +21,4 @@ const AuthMenu: React.FC<Props> = ({
 	) : (
 		<button {...btnProps} className={className} />
 	);
-};
-
-export default AuthMenu;
+}

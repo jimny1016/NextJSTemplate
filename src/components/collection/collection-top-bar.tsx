@@ -1,23 +1,24 @@
-import { Drawer } from "@components/common/drawer/drawer";
-import { MdCollectionsBookmark } from "react-icons/md";
-import Text from "@components/ui/text";
-import { useUI } from "@contexts/ui.context";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import { getDirection } from "@utils/get-direction";
-import CollectionFilterSidebar from "./collection-filter-sidebar";
+import { Drawer } from '@components/common/drawer/drawer';
+import { MdCollectionsBookmark } from 'react-icons/md';
+import Text from '@components/ui/text';
+import { useUI } from '@contexts/ui.context';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { getDirection } from '@utils/get-direction';
+import CollectionFilterSidebar from './collection-filter-sidebar';
+import motionProps from '@components/common/drawer/motion';
 
 const CollectionTopBar = () => {
 	const { openFilter, displayFilter, closeFilter } = useUI();
-	const { t } = useTranslation("common");
+	const { t } = useTranslation('common');
 	const {
 		locale,
 		query: { slug },
 	} = useRouter();
 
-	const collectionTitle = slug?.toString().split("-").join(" ");
+	const collectionTitle = slug?.toString().split('-').join(' ');
 	const dir = getDirection(locale);
-	const contentWrapperCSS = dir === "ltr" ? { left: 0 } : { right: 0 };
+	const contentWrapperCSS = dir === 'ltr' ? { left: 0 } : { right: 0 };
 	return (
 		<div className="flex justify-between items-center mb-7">
 			<Text
@@ -31,21 +32,20 @@ const CollectionTopBar = () => {
 				onClick={openFilter}
 			>
 				<MdCollectionsBookmark className="text-lg" />
-				<span className="ps-2">{t("text-filters")}</span>
+				<span className="ps-2">{t('text-filters')}</span>
 			</button>
 			<div className="flex items-center justify-end">
 				<div className="flex-shrink-0 text-body text-xs md:text-sm leading-4">
-					9,608 {t("text-items")}
+					9,608 {t('text-items')}
 				</div>
 			</div>
+			{/* TODO: need to use just one drawer component */}
 			<Drawer
-				placement={dir === "rtl" ? "right" : "left"}
+				placement={dir === 'rtl' ? 'right' : 'left'}
 				open={displayFilter}
 				onClose={closeFilter}
-				handler={false}
-				showMask={true}
-				level={null}
 				contentWrapperStyle={contentWrapperCSS}
+				{...motionProps}
 			>
 				<CollectionFilterSidebar />
 			</Drawer>

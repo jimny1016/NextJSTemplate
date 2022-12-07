@@ -43,6 +43,7 @@ const BannerBlockAncient: React.FC<BannerProps> = ({
     <div className={`${className}`}>
       {width < 768 ? (
         <div>
+          {/* @ts-ignore */}
           <Carousel breakpoints={breakpoints}>
             {(dataVariant === 'one' ? ancientBanner1 : ancientBanner2)?.map((banner: any) => (
               <SwiperSlide key={`banner--key${banner.id}`}>

@@ -310,8 +310,11 @@ export const useUI = () => {
   return context;
 };
 
+// @ts-ignore
 export const ManagedUIContext: React.FC = ({ children }) => (
+  // @ts-ignore
   <CartProvider>
+    {/* @ts-ignore */}
     <UIProvider>{children}</UIProvider>
   </CartProvider>
 );

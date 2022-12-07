@@ -53,6 +53,7 @@ const Header: React.FC = () => {
                 className="text-sm xl:text-base text-heading font-semibold"
                 btnProps={{
                   className: 'text-sm xl:text-base text-heading font-semibold focus:outline-none',
+                  // @ts-ignore
                   children: t('text-sign-in'),
                   onClick: handleLogin,
                 }}

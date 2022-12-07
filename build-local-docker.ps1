@@ -29,8 +29,8 @@ write-host "[Removing image]The image does not exist"
 # npm cache clean --force  
 # npm i --force  
 # npm run build   
-yarn install
-yarn build 
+# npm install
+# npm build 
 docker build -t nextjs-ap . -f Dockerfile
 
 # 建立及啟動容器應用

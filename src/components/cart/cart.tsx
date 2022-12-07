@@ -24,6 +24,7 @@ export default function Cart() {
 		<div className="flex flex-col w-full h-full justify-between">
 			<div className="w-full flex justify-between items-center relative ps-5 md:ps-7 py-0.5 border-b border-gray-100">
 				<h2 className="font-bold text-xl md:text-2xl m-0 text-heading">
+					{/* @ts-ignore */}
 					{t("text-shopping-cart")}
 				</h2>
 				<button
@@ -53,6 +54,7 @@ export default function Cart() {
 				>
 					<EmptyCart />
 					<h3 className="text-lg text-heading font-bold pt-8">
+						{/* @ts-ignore */}
 						{t("text-empty-cart")}
 					</h3>
 				</motion.div>
@@ -72,6 +74,7 @@ export default function Cart() {
 					)}
 				>
 					<span className="w-full pe-5 -mt-0.5 py-0.5">
+						{/* @ts-ignore */}
 						{t("text-proceed-to-checkout")}
 					</span>
 					<span className="ms-auto flex-shrink-0 -mt-0.5 py-0.5">
